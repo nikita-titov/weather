@@ -19,7 +19,6 @@ export const weatherApi = city => (dispatch, getState) => {
     .then(result => result.json())
     .then(dataWeather => {
       if (dataWeather.cod === "404") {
-        console.log("404");
         let data = { warning: true };
         dispatch({
           type: WEATHER_API,
